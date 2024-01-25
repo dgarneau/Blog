@@ -32,7 +32,7 @@ public static class WebApplicationExtensions
             app.Logger.LogCritical(e, e.Message);
 
             app.MapGet("/", () => Results.Problem(
-                detail: "Database connection test failed, please check your connection string and firewall settings, then RESTART Moonglade manually.",
+                detail: e.ToString() + "   " + e.Message + "   " +  "Database connection test failed, please check your connection string and firewall settings, then RESTART Moonglade manually.",
                 statusCode: 500
             ));
             await app.RunAsync();
