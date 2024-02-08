@@ -19,7 +19,8 @@ using Moonglade.MetaWeblog;
 using Encoder = Moonglade.Web.Configuration.Encoder;
 
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-var cultures = new[] { "fr-CA", "en-US" }.Select(p => new CultureInfo(p)).ToList();
+//var cultures = new[] { "fr-CA", "en-US" }.Select(p => new CultureInfo(p)).ToList();
+var cultures = new[] { "fr-CA" }.Select(p => new CultureInfo(p)).ToList();
 
 var builder = WebApplication.CreateBuilder(args);
 builder.WriteParameterTable();
